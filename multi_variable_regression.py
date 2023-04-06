@@ -45,3 +45,12 @@ for step in range(100001):
     if (step % 400 == 0):
         print("step=", step, "\terror value=", error_val(
             x_data, t_data), "\tW=", W, "b=", b)
+
+
+def predict(x):
+    y = np.dot(x, W) + b
+    return y
+
+
+test_data = np.array([100, 98, 81])
+print(predict(test_data))
