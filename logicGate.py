@@ -1,10 +1,6 @@
 import numpy as np
 from numerical_dervative import numerical_dervative
-
-
-# sigmoid 함수
-def sigmoid(x):
-    return 1 / (1+np.exp(-x))
+from externalFunction import *
 
 
 class LogicGate:
