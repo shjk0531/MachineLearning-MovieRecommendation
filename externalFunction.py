@@ -1,8 +1,9 @@
 import numpy as np
 
 
+# 수치미분 함수
 def numerical_dervative(f, x):
-    delta_x = 1e-4
+    delta_x = 1e-4  # 0.0001
     grad = np.zeros_like(x)
 
     it = np.nditer(x, flags=['multi_index'], op_flags=["readwrite"])
@@ -24,5 +25,6 @@ def numerical_dervative(f, x):
     return grad
 
 
+# sigmoid 함수
 def sigmoid(x):
     return 1 / (1+np.exp(-x))
